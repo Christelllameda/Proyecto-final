@@ -1,9 +1,11 @@
 import pandas as pd
+import re
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from geopy.geocoders import Nominatim
+
 #driver configuration
 opciones=Options()
 opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
@@ -33,7 +35,6 @@ def obtener_datos_obra(url):
     return obra
 
 
-
 def obtener_latitudes(direcciones):
     geolocator = Nominatim(user_agent="vzla")
     latitudes = []
@@ -46,7 +47,6 @@ def obtener_latitudes(direcciones):
             latitudes.append(None)  # Otra opción es usar None para direcciones no encontradas
 
     return latitudes
-
 
 
 def obtener_longitudes(direcciones):
@@ -63,10 +63,25 @@ def obtener_longitudes(direcciones):
     return longitudes
 
 
-def extract_numeric_value(text):
-    try:
-        numeric_value = re.search(r'\d+\.*\d*', text)
-        return float(numeric_value.group()) if numeric_value else None
-    except Exception as e:
-        print(f"Error al extraer el valor numérico: {e}")
-        return None
+def extract_numeric_value(texto):
+    if isinstance(texto, str):
+        numeros = re.findall(r'\d+[\.,]?\d*', texto)
+        if numeros:
+            return ''.join(numeros)
+    return None
+
+
+def cargar_archivos_csv(lista_archivos):
+    lista_dataframes = []
+    for archivo in lista_archivos:
+        datos = pd.read_csv(archivo, encoding='latin1')
+        lista_dataframes.append(datos)
+    conjuntos = pd.concat(lista_dataframes, ignore_index=True)
+    return conjuntos
+
+
+def extraer_año(fecha):
+    if type(fecha) == float or  type(fecha) == str:
+        return 1900
+    else:
+        return fecha.year
