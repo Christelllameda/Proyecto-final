@@ -1,5 +1,5 @@
 # **Proyecto Final - Obras públicas inconclusas en Venezuela** </div>
-[![Metro-Guarenas-Guatire.jpg]([![edit-1.jpg](https://i.postimg.cc/vBRN0Lrb/edit-1.jpg)](https://postimg.cc/v1zhBn2N))
+[![edit-1.jpg](https://i.postimg.cc/vBRN0Lrb/edit-1.jpg)](https://postimg.cc/v1zhBn2N)
 ---
 </div>
 
