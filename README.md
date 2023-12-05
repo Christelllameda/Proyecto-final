@@ -28,6 +28,18 @@ Identificar las obras públicas inconclusas en los diferentes sectores.
 
 Definir el valor total de las obras públicas que no se han terminado de ejecutar.
 
+## Extracción y limpieza de datos
+Para el proceso de ETL nos basamos en la extracción de datos de dos fuentes distintas, en este caso fueron dos páginas webs y la Api Geopy que nos proporcionó las coordenadas de las diferentes direcciones de las obras.
+
+Los métodos de extracción fueron: web scraping (selenium) donde obtuvimos todos los datos de las obras (status, dirección, el valor total de la obra, fecha de inicio, etc). Además utilizamos un cvs que contenía todos lo estados de Venezuela junto con su población y densidad.
+
+Los procesos anteriores se realizaron para crear un conjunto de datos completos y actualizados sobre estas obras. Luego, se llevó a cabo una limpieza y transformación de los datos para estandarizar la información y hacerla más accesible y comprensible. 
+
+## Creación de base de datos
+Para la creación de nuestra base de datos utilizamos MySQL desde python, para ello efectuamos la conexión al servidor para crear una nueva base de datos vacía a la que llamamos 'total_obras".
+
+Posteriormente cargamos nuestro archivo como un dataframe y ejecutamos el comando '.to_sql" para crear una nueva tabla llamada "obras_inconclusas" que contiene todas las obras en los distintos sectores que scrapeamos. Todo los códigos se encuentran descritos en el jupyter notebook 'Base_datos_sql'
+
 ## Visualización de datos
 En el proceso de visualización de datos, nos basamos en el archivo 'obras_inconclusas.xlsx' que contiene todos los datos extraídos de las diferentes obras. Para llevar a cabo esta tarea de manera efectiva y dinámica, hemos empleado Tableau, una herramienta especializada en la creación de visualizaciones interactivas.
 
