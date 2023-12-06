@@ -6,12 +6,12 @@
 ## Introducción
 En el presente proyecto hablaremos sobre las obras públicas inconclusas en Venezuela. Este proyecto es una iniciativa estratégica diseñada para abordar los desafíos en la ejecución y seguimiento de obras de infraestructura en el país. Similar a otros lugares en el mundo, Venezuela enfrenta dificultades que afectan el desarrollo y bienestar de sus ciudadanos debido a la falta de conclusión de proyectos públicos.
 
-El objetivo central de este proyecto es analizar y visualizar datos relacionados con obras públicas que se encuentran actualmente inconclusas en diversas regiones de Venezuela. La ejecución de obras inconclusas puede tener consecuencias significativas, incluido el desperdicio de recursos públicos, la falta de acceso a servicios esenciales para la población y un impacto negativo en la calidad de vida de las comunidades afectadas.
 
-Para mejorar la comprensión y visibilidad de estos datos, se utilizará la plataforma de visualización de datos Tableau. Esta herramienta permitirá presentar de manera interactiva y gráfica la información recopilada, destacando patrones, tendencias y áreas críticas. La visualización de datos en Tableau facilitará la identificación de áreas geográficas específicas con un alto número de obras inconclusas, la distribución de los recursos asignados y otros indicadores clave.
+Para el desarrollo de este proyecto se llevará a cabo la recopilación, limpieza, transformación y análisis de datos relacionados con obras públicas que se encuentran actualmente inconclusas en diferentes regiones de Venezuela. La ejecución de obras inconclusas puede tener consecuencias significativas, incluido el desperdicio de recursos públicos, la falta de acceso a servicios esenciales para la población y un impacto negativo en la calidad de vida de las comunidades afectadas.
 
-Al emplear Tableau, se espera proporcionar a las partes interesadas, responsables de la toma de decisiones y al público en general, una comprensión más clara y accesible de la situación de las obras públicas inconclusas en Venezuela. Esto, a su vez, puede contribuir a la formulación de políticas más informadas, la asignación eficiente de recursos y la implementación de soluciones efectivas para abordar esta problemática. La visualización de datos en Tableau será una herramienta valiosa para promover la transparencia y el entendimiento público de la situación de las obras públicas en el país.
+Con el fin de optimizar la visualización y comprensión de estos datos, se utilizará la plataforma Tableau. Esta herramienta permitirá presentar de manera interactiva y gráfica la información recopilada, destacando patrones, tendencias y áreas críticas. La visualización de datos en Tableau facilitará la identificación de áreas geográficas específicas con un alto número de obras inconclusas, los distintos sectores que corresponden a cada una de ellas, la distribución de los recursos asignados y otros indicadores clave.
 
+Se espera proporcionar a las partes interesadas, responsables de la toma de decisiones y al público en general, una comprensión más clara y accesible de la situación de las obras públicas inconclusas en Venezuela. Esto, a su vez, puede contribuir a la formulación de políticas más informadas, la asignación eficiente de recursos y la implementación de soluciones efectivas para abordar esta problemática. 
 
 ## Contenido
 - [data](https://github.com/Christelllameda/Proyecto-final/tree/main/data)
@@ -21,7 +21,7 @@ Al emplear Tableau, se espera proporcionar a las partes interesadas, responsable
 
 
 ## Objetivos
-El propósito final de este proyecto es proporcionar a los ciudadanos, funcionarios gubernamentales y la sociedad civil una herramienta valiosa para el monitoreo y la toma de decisiones informadas en relación con las obras públicas en Venezuela. Al aumentar la transparencia y visibilidad de estas obras, se busca contribuir a la mejora de la gestión de proyectos de infraestructura y, en última instancia, al desarrollo sostenible del país.
+El propósito final de este proyecto es proporcionar a los ciudadanos, funcionarios gubernamentales y la sociedad civil, una herramienta valiosa para el monitoreo y la toma de decisiones informadas en relación con las obras públicas en Venezuela. Al aumentar la transparencia y visibilidad de estas obras, se busca contribuir a la mejora de la gestión de proyectos de infraestructura y, en última instancia, al desarrollo sostenible del país.
 Para ello necesitaremos:
 
 Identificar las obras públicas inconclusas en los diferentes sectores.
@@ -38,7 +38,7 @@ Los procesos anteriores se realizaron para crear un conjunto de datos completos 
 ## Creación de base de datos
 Para la creación de nuestra base de datos utilizamos MySQL desde python, para ello efectuamos la conexión al servidor para crear una nueva base de datos vacía a la que llamamos 'total_obras".
 
-Posteriormente cargamos nuestro archivo como un dataframe y ejecutamos el comando '.to_sql" para crear una nueva tabla llamada "obras_inconclusas" que contiene todas las obras en los distintos sectores que scrapeamos. Todo los códigos se encuentran descritos en el jupyter notebook 'Base_datos_sql'
+Posteriormente cargamos nuestro archivo como un dataframe y ejecutamos el comando '.to_sql" para crear una nueva tabla llamada "obras_inconclusas" que contiene todas las obras en los distintos sectores que scrapeamos. 
 
 ## Visualización de datos
 En el proceso de visualización de datos, nos basamos en el archivo 'obras_inconclusas.xlsx' que contiene todos los datos extraídos de las diferentes obras. Para llevar a cabo esta tarea de manera efectiva y dinámica, hemos empleado Tableau, una herramienta especializada en la creación de visualizaciones interactivas.
@@ -47,7 +47,7 @@ Tableau nos ha permitido explorar y presentar de manera clara y comprensible los
 
 La utilización de Tableau ha posibilitado la creación de un dashboard interactivo que permite a los usuarios explorar los datos de manera personalizada. Desde la identificación de proyectos específicos hasta el análisis de ejecución financiera, la visualización de datos en Tableau se erige como una herramienta valiosa para todos los interesados, desde responsables de proyectos hasta ciudadanos preocupados por el desarrollo de su comunidad.
 
-En el siguiente link se visualiza el resultado final del dashboard
+En el siguiente link se visualiza el resultado final.
 
 (https://public.tableau.com/app/profile/christell.lameda/viz/Obras_inconclusas_vzla/Dashboard1?publish=yes)
 
